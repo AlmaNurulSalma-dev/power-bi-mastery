@@ -26,14 +26,15 @@ Load the built-in "Sales" sample dataset into Power BI Desktop and explore the d
 
 ---
 
-#### Step 2: Load Sample Data
-1. Click **File** (top left menu)
-2. Click **Open report**
-3. Look for "Retail Analysis Sample.pbix"
-   - If you don't see it, go to: File → Samples → Retail Analysis Sample
-4. Click **Open**
+#### Step 2: Load Online Retail Dataset
+1. Go to: https://www.kaggle.com/datasets/vijayuv/onlineretail
+2. Click **Download** button (may need Kaggle account - free)
+3. Save the file to: `00_Resources/Sample_Data/`
+4. Back in Power BI, click **File** → **Get Data** → **Text/CSV** (or **Excel** if xlsx)
+5. Browse to your downloaded file and click **Open**
+6. Click **Load** to import the data
 
-*Wait ~30 seconds for Power BI to load the sample*
+*Wait ~10-15 seconds for data to load*
 
 ---
 
@@ -86,9 +87,9 @@ Screenshot the desktop and save in your Day 1 folder:
 
 ### Reflection Question
 Answer this in your notes:
-- What surprised you about what Power BI pre-built?
-- How many visuals did you count across all pages?
-- What data tables did you identify?
+- What columns did you see in the Online Retail dataset?
+- How many rows of data loaded?
+- What type of transactions are in this dataset?
 
 ---
 
