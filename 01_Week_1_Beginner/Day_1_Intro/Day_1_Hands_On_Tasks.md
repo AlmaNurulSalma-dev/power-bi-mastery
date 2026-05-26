@@ -99,10 +99,10 @@ Answer this in your notes:
 **What you'll learn:** Creating visualizations from scratch
 
 ### Objective
-Create a simple bar chart showing Sales by Product Category.
+Create a bar chart showing Total Sales by Country using the Online Retail dataset.
 
 ### Prerequisites
-You should have Task 1 completed (Retail Analysis Sample loaded)
+You should have Task 1 completed (Online Retail dataset loaded)
 
 ---
 
@@ -116,9 +116,9 @@ You should have Task 1 completed (Retail Analysis Sample loaded)
 
 ---
 
-#### Step 2: Add First Visual
+#### Step 2: Add First Visual - Bar Chart
 1. Go to **Insert tab** (top ribbon)
-2. Click **Column Chart** (or Bar Chart)
+2. Click **Bar Chart** (horizontal bars work better for countries)
 3. A placeholder chart appears on your canvas
 4. Resize it by dragging corners to make it bigger
 
@@ -127,35 +127,37 @@ You should have Task 1 completed (Retail Analysis Sample loaded)
 #### Step 3: Add Data to Your Chart
 You should see a **Visualizations panel** on the right.
 Below it, you'll see sections:
-- Fields
-- Legend
+- Fields (showing OnlineRetail table columns)
 - Axis
+- Legend
 - Values
 
 **Do this:**
-1. In the **Fields** section on right, find **Product** table
-2. Expand it (click arrow)
-3. Drag **Category** to the **Axis** section
-4. Drag **Sales** (or Amount) to the **Values** section
+1. In the **Fields** section, find **Country** 
+2. Drag **Country** to the **Axis** section
+3. Drag **Quantity** to the **Values** section (Power BI will auto-sum it)
+4. Now create a calculated field for Sales:
+   - Drag **UnitPrice** to **Values** as well
+   - We'll multiply Quantity × UnitPrice for total sales
 
-**Result:** You've created your first chart! 🎉
+**Result:** You've created your first chart showing countries! 🎉
 
 ---
 
 #### Step 4: Customize Your Chart
 1. Right-click the chart → **Edit title**
-2. Change title to: "Total Sales by Category"
+2. Change title to: "Total Sales by Country"
 3. Click elsewhere to save
 
 ---
 
-#### Step 5: Add a Second Visual
+#### Step 5: Add a Second Visual - Card
 1. Click blank area of canvas
 2. Go to **Insert tab** again
 3. Click **Card** visual
-4. Drag **Amount** (or Sales) to the Values
+4. Drag **Quantity** to the Values
 
-**Result:** Shows a single large number (total sales)
+**Result:** Shows total quantity sold across all transactions
 
 ---
 
@@ -180,7 +182,7 @@ Below it, you'll see sections:
 **What you'll learn:** Interactive filters (slicers)
 
 ### Objective
-Add a Region slicer so users can filter the chart by region.
+Add Country and Date Range slicers so users can filter the chart interactively.
 
 ### Prerequisites
 Complete Task 2 first
@@ -189,69 +191,86 @@ Complete Task 2 first
 
 ### Step-by-Step Instructions
 
-#### Step 1: Add a Slicer
-1. On your blank report page, click blank area
+#### Step 1: Add Country Slicer
+1. On your report page, click blank area
 2. Go to **Insert tab**
 3. Click **Slicer** (looks like a funnel icon)
 4. A slicer placeholder appears
 
 ---
 
-#### Step 2: Configure Slicer
+#### Step 2: Configure Country Slicer
 1. In the **Visualizations** panel, look for **Fields**
-2. Find the **Region** table
-3. Expand it and find **Region** column
-4. Drag **Region** to your slicer
+2. Find the **Country** column (from OnlineRetail table)
+3. Drag **Country** to your slicer
 
-**Result:** Slicer shows all available regions
+**Result:** Slicer shows all available countries
 
 ---
 
-#### Step 3: Test the Slicer
-1. Click a region (e.g., "North")
-2. Notice: Your bar chart changes to show only that region!
-3. Click another region
-4. Click "Clear filter" to show all again
+#### Step 3: Test the Country Slicer
+1. Click a country (e.g., "Netherlands" or "France")
+2. Notice: Your bar chart changes to show only that country!
+3. Click another country
+4. Click "Clear filter" or select multiple to show all again
 
 **This is interactivity!** ✨
 
 ---
 
-#### Step 4: Format the Slicer (Bonus)
-1. Click the slicer
+#### Step 4: Add Date Range Slicer
+1. Click blank area of canvas
+2. Go to **Insert tab** → **Slicer**
+3. Another slicer placeholder appears
+
+---
+
+#### Step 5: Configure Date Slicer
+1. In the **Visualizations** panel, find **Fields**
+2. Find the **InvoiceDate** column
+3. Drag **InvoiceDate** to your new slicer
+
+**Result:** Slicer shows a date range you can filter by
+
+---
+
+#### Step 6: Test Both Slicers Together
+1. Select Country = "United Kingdom"
+2. Select Date range = Jan 2011 to Jun 2011
+3. Your bar chart now shows only UK sales in that date range!
+4. Click "Clear" on each slicer to reset
+
+**You now have a fully interactive report!** 🎉
+
+---
+
+#### Step 7: Format the Slicers (Bonus)
+1. Click a slicer
 2. Click the **Format** icon (paint brush) in Visualizations panel
 3. Adjust "Text size" to make text bigger
-4. Change "Slicer header" color if you want
+4. Change colors if you want
 
 ---
 
-#### Step 5: Add Another Slicer
-Repeat Steps 1-2, but this time:
-1. Create another slicer
-2. Add **Product Category** to it
-3. Now users can filter by BOTH Region AND Category!
-
----
-
-#### Step 6: Final Save
+#### Step 8: Final Save
 1. **File** → **Save**
 2. This should auto-save as `Day_1_First_Report.pbix`
 
 ---
 
 ### Testing Your Report
-1. Click Region slicer → Select "East"
-2. Click Category slicer → Select "Phones"
-3. Your bar chart shows only Phone sales in the East region!
-4. Click "Clear" on slicers to reset
+1. Click Country slicer → Select "United Kingdom"
+2. Click Date slicer → Select a date range
+3. Your bar chart shows only UK sales in that date range!
+4. Click "Clear" on slicers to reset all filters
 
 **Congratulations!** You've created an interactive Power BI report! 🎉
 
 ---
 
 ### Reflection Questions
-1. How did the slicer change user experience vs static chart?
-2. What if a user wants to see 2 regions at once?
+1. How did having 2 slicers change the user experience?
+2. Which slicer is more useful - Country or Date range?
 3. How is this better than sending an Excel file?
 
 ---
