@@ -124,7 +124,21 @@ You should have Task 1 completed (Online Retail dataset loaded)
 
 ---
 
-#### Step 3: Add Data to Your Chart
+#### Step 3A: Create a Calculated Column for Sales
+First, we need to create a Sales column (Quantity × UnitPrice):
+
+1. At the top, click **Modeling tab**
+2. Click **New Column**
+3. In the formula bar, type:
+   ```
+   Sales = 'OnlineRetail'[Quantity] * 'OnlineRetail'[UnitPrice]
+   ```
+4. Press **Enter**
+5. Power BI creates a new "Sales" column in your data
+
+---
+
+#### Step 3B: Add Data to Your Chart
 You should see a **Visualizations panel** on the right.
 Below it, you'll see sections:
 - Fields (showing OnlineRetail table columns)
@@ -135,12 +149,10 @@ Below it, you'll see sections:
 **Do this:**
 1. In the **Fields** section, find **Country** 
 2. Drag **Country** to the **Axis** section
-3. Drag **Quantity** to the **Values** section (Power BI will auto-sum it)
-4. Now create a calculated field for Sales:
-   - Drag **UnitPrice** to **Values** as well
-   - We'll multiply Quantity × UnitPrice for total sales
+3. Drag **Sales** (your new calculated column!) to the **Values** section
+4. Power BI will auto-sum it
 
-**Result:** You've created your first chart showing countries! 🎉
+**Result:** You've created your first chart showing Total Sales by Country! 🎉
 
 ---
 
@@ -155,9 +167,9 @@ Below it, you'll see sections:
 1. Click blank area of canvas
 2. Go to **Insert tab** again
 3. Click **Card** visual
-4. Drag **Quantity** to the Values
+4. Drag **Sales** (your calculated column) to the Values
 
-**Result:** Shows total quantity sold across all transactions
+**Result:** Shows total sales amount across all transactions (with currency formatting)
 
 ---
 
