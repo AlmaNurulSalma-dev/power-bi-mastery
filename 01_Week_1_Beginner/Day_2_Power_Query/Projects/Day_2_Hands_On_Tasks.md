@@ -19,16 +19,24 @@ Load a messy dataset and identify data quality problems.
 ### Step-by-Step Instructions
 
 #### Step 1: Get Sample Messy Data
-You have 2 options:
 
-**Option A: Use Online Retail (from Day 1)**
-- Already loaded in Power BI
-- Use that dataset
+**RECOMMENDED: Download Retail Fashion Data**
+- Go to: https://www.kaggle.com/datasets/vanpatangan/retail-fashion-data
+- Click "Download" button
+- Save to: `00_Resources/Sample_Data/`
 
-**Option B: Download Messy Sample**
-- Go to: https://www.kaggle.com/datasets/vijayuv/onlineretail
-- Download the CSV
-- We'll load it fresh to see raw data
+**Why this dataset:**
+```
+✅ Real retail fashion data (messy)
+✅ Multiple quality issues
+✅ Great for learning transformations
+✅ Practical business scenario
+✅ Mix of customer, product, and sales data
+```
+
+**Alternative if download fails:**
+- Dirty Customer Data: https://www.kaggle.com/datasets/thenuclearnexus/dirty-customer-data
+- E-Commerce Data: https://www.kaggle.com/datasets/carrie1/ecommerce-data
 
 #### Step 2: Load Data in Power BI
 1. **File** → **Get Data** → **Text/CSV**

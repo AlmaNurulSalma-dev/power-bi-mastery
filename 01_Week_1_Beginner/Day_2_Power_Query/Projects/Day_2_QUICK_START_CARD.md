@@ -214,14 +214,14 @@ Final (clean)
 ## 📁 WHERE TO SAVE
 
 ```
+Download: Retail Fashion Data
+https://www.kaggle.com/datasets/vanpatangan/retail-fashion-data
+
+Save to:
+C:\Users\kinet\OneDrive\Documents\PROJECT-ALMAAA\power-bi-mastery\00_Resources\Sample_Data\
+
 Projects/
 └── Day_2_Power_Query_Practice.pbix
-
-Screenshots/
-├── Day_2_Task_1_Raw_Data.png
-├── Day_2_Task_2_Before_Cleaning.png
-├── Day_2_Task_2_After_Cleaning.png
-└── Day_2_Task_3_Applied_Steps.png
 ```
 
 ---

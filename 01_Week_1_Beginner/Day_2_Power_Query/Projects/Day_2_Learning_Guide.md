@@ -220,11 +220,11 @@ In Power BI Desktop:
 
 ```
 ┌─────────────────────────────────────┐
-│  Home Tab                            │
+│  Home Tab                           │
 │  ├─ Get Data (load data)            │
 │  ├─ Recent Sources                  │
 │  └─ Refresh                         │
-│                                      │
+│                                     │
 │  Transform Tab (appears after data) │
 │  ├─ Remove Duplicates               │
 │  ├─ Remove Errors                   │
