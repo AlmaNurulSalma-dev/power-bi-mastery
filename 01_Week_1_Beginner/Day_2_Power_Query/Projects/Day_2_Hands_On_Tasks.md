@@ -53,23 +53,45 @@ Power BI will show you the data table. Look for:
 - **Blank cells** - Any empty values?
 - **Inconsistencies** - Same data written differently?
 
-#### Step 4: Take Notes
-Write down 5 data quality issues you see:
-1. ________________________
-2. ________________________
-3. ________________________
-4. ________________________
-5. ________________________
+#### Step 4: Identify Data Quality Issues
 
-#### Step 5: Take Screenshot
-Screenshot of the raw data (showing any issues)
-Save as: `Day_2_Task_1_Raw_Data.png`
+You should see these issues in the data:
+
+**In customer_data.csv:**
+```
+✓ Gender field contains "???" (not Male/Female)
+✓ Email field has empty strings
+```
+
+**In product_data.csv:**
+```
+✓ Color field has empty strings (blank values)
+✓ Category field contains "???" (invalid data)
+```
+
+**In sales_data.csv:**
+```
+✓ Customer_id field has empty strings (missing values)
+```
+
+**In store_data.csv:**
+```
+✓ No major issues - clean!
+```
+
+#### Step 5: Document Findings
+Note what you found:
+1. customer_data: "???" in gender field
+2. customer_data: empty emails
+3. product_data: empty color field
+4. product_data: "???" in category
+5. sales_data: empty customer_id
 
 ---
 
 ### Reflection Question
-- What's the biggest data quality issue?
-- How would you clean it manually vs with Power Query?
+- Which dataset is messiest?
+- How would you clean these manually vs with Power Query?
 
 ---
 
@@ -149,12 +171,12 @@ Applied Steps
 
 ---
 
-#### Step 7: Compare Before & After
-Take 2 screenshots:
-- `Day_2_Task_2_Before_Cleaning.png` (raw data)
-- `Day_2_Task_2_After_Cleaning.png` (cleaned data)
-
-Note the difference!
+#### Step 7: Verify Changes
+Review the Applied Steps to confirm:
+- Duplicates removed
+- Blanks removed
+- Data types changed
+- Data is now clean
 
 ---
 
@@ -254,11 +276,11 @@ Applied Steps
 1. **Home** → **Close & Apply**
 2. Cleaned, transformed data loads in Power BI
 
-#### Step 8: Take Final Screenshot
-Screenshot of Power Query Editor showing:
-- Final data
-- All Applied Steps visible on right
-Save as: `Day_2_Task_3_Applied_Steps.png`
+#### Step 8: Verify Applied Steps
+Review your Applied Steps panel showing:
+- All transformations applied
+- Logical step order
+- Clean final data
 
 ---
 
@@ -273,9 +295,9 @@ Save as: `Day_2_Task_3_Applied_Steps.png`
 ## TASK COMPLETION CHECKLIST
 
 ### Task 1: Load & Explore
-- [ ] Loaded messy dataset
-- [ ] Identified 5 data quality issues
-- [ ] Took screenshot of raw data
+- [ ] Loaded dataset
+- [ ] Identified 5 quality issues (per the data)
+- [ ] Understand the problems
 - [ ] Answered reflection questions
 
 **Time spent:** _____ minutes
@@ -289,7 +311,6 @@ Save as: `Day_2_Task_3_Applied_Steps.png`
 - [ ] Changed data types (4+ columns)
 - [ ] Reviewed Applied Steps
 - [ ] Loaded cleaned data
-- [ ] Took before/after screenshots
 
 **Time spent:** _____ minutes
 **Confidence:** ⭐⭐⭐⭐⭐
@@ -298,11 +319,10 @@ Save as: `Day_2_Task_3_Applied_Steps.png`
 
 ### Task 3: Advanced Transformations
 - [ ] Split column (if applicable)
-- [ ] Replaced invalid values
-- [ ] Created custom column (or filtered)
+- [ ] Replaced invalid values ("???")
+- [ ] Removed empty strings
 - [ ] Applied all transformations
 - [ ] Reviewed complete Applied Steps
-- [ ] Took final screenshot
 
 **Time spent:** _____ minutes
 **Confidence:** ⭐⭐⭐⭐⭐
